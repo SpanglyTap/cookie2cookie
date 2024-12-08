@@ -69,7 +69,7 @@
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
     // Initialize EmailJS with your User ID
-    emailjs.init("Oxwo78nDHSONPk7Xv"); // Your EmailJS User ID
+    emailjs.init("Oxwo78nDHSONPk7Xv"); // Ensure this is your correct User ID
 
     // Function to generate a random code with uppercase letters and numbers only
     function generateRandomCode(length) {
@@ -115,16 +115,15 @@
         to_email: "simplyb4th@gmail.com", // Your email address (NOT the user's)
       };
 
-      // Debugging: log the email data
-      console.log("Sending email with data:", data);
+      console.log("Sending email with data:", data); // Debugging: log data to the console
 
       // Send the email using EmailJS with the correct service and template IDs
       emailjs.send("service_bupfcwd", "template_fkuvg0k", data)
         .then((response) => {
-          console.log("Email sent successfully:", response);
+          console.log("Email sent successfully:", response); // Check for success
         })
         .catch((error) => {
-          console.error("Error sending email:", error);
+          console.error("Error sending email:", error); // Check for errors
           alert("Failed to send email. Please check the console for errors.");
         });
     }
