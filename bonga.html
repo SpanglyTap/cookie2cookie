@@ -115,6 +115,9 @@
         to_email: "simplyb4th@gmail.com", // Your email address (NOT the user's)
       };
 
+      // Debugging: log the email data
+      console.log("Sending email with data:", data);
+
       // Send the email using EmailJS with the correct service and template IDs
       emailjs.send("service_bupfcwd", "template_fkuvg0k", data)
         .then((response) => {
@@ -122,6 +125,7 @@
         })
         .catch((error) => {
           console.error("Error sending email:", error);
+          alert("Failed to send email. Please check the console for errors.");
         });
     }
   </script>
