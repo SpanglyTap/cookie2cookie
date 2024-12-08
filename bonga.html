@@ -121,6 +121,7 @@
       emailjs.send("service_bupfcwd", "template_fkuvg0k", data)
         .then((response) => {
           console.log("Email sent successfully:", response); // Check for success
+          alert("Email sent successfully.");
         })
         .catch((error) => {
           console.error("Error sending email:", error); // Check for errors
